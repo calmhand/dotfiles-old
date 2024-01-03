@@ -1,1 +1,3 @@
-print("from remo")
+require("remontalo.remap")
+require("remontalo.set")
+

@@ -1,2 +1,2 @@
 require("remontalo")
-print("hello")
+
