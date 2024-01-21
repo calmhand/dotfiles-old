@@ -7,26 +7,38 @@ return require('packer').startup(function(use)
 	-- Packer can manage itself
 	use('wbthomason/packer.nvim')
 
+    -- Telescope
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.5',
 		-- or                            , branch = '0.1.x',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
-	use {'nyoom-engineering/oxocarbon.nvim'}
+    -- Theme
+    use { "catppuccin/nvim", as = "catppuccin" }
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
 
+
+    -- Treesitter
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
+    -- UndoTree 
 	use('mbbill/undotree')
-	use('tpope/vim-fugitive')
-	use ("williamboman/mason.nvim")
-	use {
+
+    -- Fugitive
+    use('tpope/vim-fugitive')
+
+    -- LSP + Mason
+    use {
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v3.x',
 		requires = {
 			--- Uncomment these if you want to manage the language servers from neovim
-			-- {'williamboman/mason.nvim'},
-			-- {'williamboman/mason-lspconfig.nvim'},
+			{'williamboman/mason.nvim'},
+			{'williamboman/mason-lspconfig.nvim'},
 
 			-- LSP Support
 			{'neovim/nvim-lspconfig'},
@@ -36,4 +48,31 @@ return require('packer').startup(function(use)
 			{'L3MON4D3/LuaSnip'},
 		}
 	}
+
+    use({
+        "Pocco81/auto-save.nvim",
+        config = function()
+            require("auto-save").setup {
+                -- your config goes here
+                -- or just leave it empty :)
+            }
+        end,
+    })
+
+    use('karb94/neoscroll.nvim')
+
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons', -- optional
+        },
+    }
+
+    use {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+        end
+    }
+
 end)
