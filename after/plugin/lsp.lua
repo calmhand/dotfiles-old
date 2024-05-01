@@ -23,11 +23,16 @@ require'lspconfig'.lua_ls.setup{} -- Lua
 require'lspconfig'.jdtls.setup{} -- Java
 require'lspconfig'.eslint.setup{} -- JS/TS
 require'lspconfig'.tsserver.setup{} -- TS
--- require'lspconfig'.vuels.setup{} -- Vue
 require'lspconfig'.cssls.setup{} -- CSS
 require'lspconfig'.gopls.setup{} -- Go
 require'lspconfig'.pylsp.setup{} -- Python
 require'lspconfig'.html.setup{} -- HTML
-require'lspconfig'.volar.setup{ -- Volar (Vue)
-  filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json'}
+
+require'lspconfig'.volar.setup {
+  filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
+  init_options = {
+    vue = {
+      hybridMode = false,
+    },
+  },
 }
