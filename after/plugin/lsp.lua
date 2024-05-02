@@ -17,22 +17,12 @@ local cmp_mappings = lsp_zero.defaults.cmp_mappings({
     ["<C-Space>"] = cmp.mapping.complete(),
 })
 
-
--- here you can setup the language servers
-require'lspconfig'.lua_ls.setup{} -- Lua
-require'lspconfig'.jdtls.setup{} -- Java
-require'lspconfig'.eslint.setup{} -- JS/TS
-require'lspconfig'.tsserver.setup{} -- TS
-require'lspconfig'.cssls.setup{} -- CSS
-require'lspconfig'.gopls.setup{} -- Go
-require'lspconfig'.pylsp.setup{} -- Python
-require'lspconfig'.html.setup{} -- HTML
-
-require'lspconfig'.volar.setup {
-  filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
-  init_options = {
-    vue = {
-      hybridMode = false,
-    },
-  },
+require'lspconfig'.lua.setup{
+    settings = {
+        Lua = {
+            diagnostics = {
+                globals = { 'vim' }
+            }
+        }
+    }
 }
