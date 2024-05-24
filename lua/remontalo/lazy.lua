@@ -36,5 +36,7 @@ require("lazy").setup({
   {'williamboman/mason.nvim'}, -- LSP + Helpers
   {'williamboman/mason-lspconfig.nvim'},
   {'neovim/nvim-lspconfig'},
+  {'hrsh7th/nvim-cmp'},
+  {'hrsh7th/cmp-nvim-lsp'},
 
 })
