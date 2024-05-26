@@ -1,4 +1,6 @@
+# Common locations
 alias sdny="cd ~/SPELLBOOK/sevendaysnineyears/"
+alias dotfiles="cd ~/.dotfiles/"
 
 # Easier navigation: ..., ...., ....., and -
 alias ..="cd .."

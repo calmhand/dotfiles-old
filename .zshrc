@@ -11,8 +11,9 @@ export CPPFLAGS="-I/opt/homebrew/opt/tcl-tk/include"
 
 PATH=/bin:/usr/bin:/usr/local/bin:${PATH}
 export PATH
-source ".aliases"
-alias sublime='open -a "Sublime Text"'
+
+source "$HOME/.dotfiles/.aliases"
+
 alias c='clear' #c: Clear terminal display
 alias f='open -a Finder ./' #f: Opens current directory in MacOS Finder
 export PATH="/opt/homebrew/opt/icu4c/bin:$PATH"
