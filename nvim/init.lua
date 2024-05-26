@@ -5,4 +5,4 @@ require("core.plugin_config")
 
 -- Set colorscheme after options
 vim.opt.termguicolors = true
-vim.cmd('colorscheme flexoki-dark')
+vim.cmd('colorscheme leaf')

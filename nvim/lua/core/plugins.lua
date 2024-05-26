@@ -17,6 +17,7 @@ require("lazy").setup({
   "folke/neodev.nvim",
 
   { 'kepano/flexoki-neovim', name = 'flexoki' }, -- Theme
+  {'daschw/leaf.nvim'},
 
   { 'nvim-telescope/telescope.nvim', tag = '0.1.6', -- Fuzzy Finder
       dependencies = { 'nvim-lua/plenary.nvim' }
